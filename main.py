@@ -21,10 +21,11 @@ def alarmclock(alartime):
         time_now = datetime.datetime.now().strftime("%H:%M:%S")
         print(time_now)
         if time_now == alartime:
-            Wakeup = Label(root,font=('arial',20,'bold'),text="Wakeup! Wakeup",bg='DorgerBlue',fg="White").grid(row=6,columnspan=3)
+            Wakeup = Label(root, font=('arial', 20, 'bold'), text="Wakeup! Wakeup",
+                           bg="DodgerBlue2", fg="White").grid(row=6, columnspan=3)
             print(Wakeup)
             mixer.init()
-            mixer.music.load(r'best_wakeup_alarm.mp3')
+            mixer.music.load(r'./best_wakeup_alarm.mp3')
             mixer.music.play()
             break
 hrs= StringVar()
